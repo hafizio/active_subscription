@@ -1,0 +1,7 @@
+h1 What is the best programming language?
+
+aside = react_component('feed')
+aside = react_component('chart')
+
+- @candidates.each do |candidate|
+  = link_to candidate.title, vote_path(candidate), method: :patch, remote: true, style: "color: #{candidate.color}"
